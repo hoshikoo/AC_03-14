@@ -29,20 +29,26 @@ public class DrawRocket2 {
     }
 
     public static void drawbody(int size){
-        for (int i=0; i<size; i++) {
+        //for (int i=0; i<2; i++) {
+
             String line = "|";
+            String dots = ".";//this should print size-1 times and increase
+            for(int a=(size-1); a>size;a--){
+                System.out.println(dots);
+            }
 
             for (int j = 0; j < size * 2; j++) {
                 line += "/\\";
             }
 
             line += "|";
+
             System.out.println(line);
-        }
+        //}
     }
 
     public static void drawbodyTwo(int size){
-        for (int i=0; i<size; i++) {
+       // for (int i=0; i<size; i++) {
             String line = "|";
 
             for (int j = 0; j < size * 2; j++) {
@@ -51,11 +57,11 @@ public class DrawRocket2 {
 
             line += "|";
             System.out.println(line);
-        }
+       // }
     }
 
     public static void main (String[] args){
-        int size=2;
+        int size=3;
         head(size);
         drawLine(size);
         drawbody(size);
